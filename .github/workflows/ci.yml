@@ -13,6 +13,10 @@ permissions:
 jobs:
   quality:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+      fail-fast: false
     steps:
       - uses: actions/checkout@v6
 
